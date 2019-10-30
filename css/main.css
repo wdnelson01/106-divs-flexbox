@@ -112,6 +112,7 @@ body {
 .wrapper {
   /*add display:flex and set justify-content to space-between*/
   display: flex;
+  /* flex-flow: row-wrap;
   justify-content: space-between;
   align-items: center;
 }
@@ -131,9 +132,8 @@ body {
 }
 
 .div-1, .div-2 {
-  border-right: 1px solid #545454;
-  padding-right: 30px;
-}
+    border-right: 1px solid #545454;
+    padding-right: 30px;
 
 
 /* ==========================================================================
@@ -215,7 +215,18 @@ body {
    These examples override the primary ('mobile first') styles.
    Modify as content requires.
    ========================================================================== */
-
+/*
+@media all and (min-width: 1200px) {
+  .div-1, .div-2, .div-3 {
+    flex-basis: 30%;      
+    }
+    
+  .div-1, .div-2 {
+    border-right: 1px solid #545454;
+    padding-right: 30px;
+    }
+}
+*/  
 @media print,
        (-webkit-min-device-pixel-ratio: 1.25),
        (min-resolution: 1.25dppx),
