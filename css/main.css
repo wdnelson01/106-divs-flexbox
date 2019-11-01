@@ -14,7 +14,12 @@ html {
     color: #222;
     font-size: 1em;
     line-height: 1.4;
+    box-sizing: border-box;
 }
+
+*, *:before, *:after {
+    box-sizing: inherit;
+  }
 
 /*
  * Remove text-shadow in selection highlight:
@@ -95,39 +100,62 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
-
 html {
-  background-color: #222222;
+  /*background-color: #222222;*/
+  background-color: #fff;
+  font-size: 16px;
   height: 100%;
   width: 100%;
 }
 
 body {
   font-family: 'Source Sans Pro', sans-serif;
-  font-weight: 700;
-  padding: 2em;
+  font-size: 1em;
+  color: #fff;
+  padding: 0 2em;
   height: 100%;
 }
 
-.wrapper {
-  /*add display:flex and set justify-content to space-between*/
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
-  align-items: center;
+header,
+footer {
+  background-color: #222;
+  height: 80px;
+  width: 100%;
 }
 
-.div-1, .div-2, .div-3 {
-  /*give the divs a width of 30%, add display:flex, set justify-content and align-items to center*/
-  color: #fff;
-  line-height: 1.5em;
-  font-size: 1.25em;
-  font-weight: 400;
-  height: auto;
+main {
+  background-color: #ccc;
+  height: 250px;
+  width: 100%;
+}
+
+header,
+footer,
+main {
+  /*set display to flex and vertically & horizontally align by setting justify-content and align-items to center*/
+}
+
+#div-1,
+#div-2,
+#div-3 {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* width: 30%; */
+  /* -- I think these lines are redundant and should be set at the next container down --
+  line-height: 1.5em;
+  font-size: 1.25em; --*/
+  height: auto;
+}
+
+.flex-container {
+  /*set display to flex and vertically & horizontally align by setting justify-content and align-items to center, and set flex-flow to row wrap*/
+}
+
+.flex-items {
+  /*set display to flex and vertically & horizontally align by setting justify-content and align-items to center*/
+  background-color: #f16059;
+  font-size: 1.25em;
+  line-height: 1.5em;
 }
 
 /* ==========================================================================
@@ -209,7 +237,7 @@ body {
    These examples override the primary ('mobile first') styles.
    Modify as content requires.
    ========================================================================== */
-
+/*
 @media all and (min-width: 1200px) {
   .div-1, .div-2, .div-3 {
     flex-basis: 30%;      
@@ -220,7 +248,7 @@ body {
     padding-right: 30px;
   }
 }
-
+*/
 @media print,
        (-webkit-min-device-pixel-ratio: 1.25),
        (min-resolution: 1.25dppx),
