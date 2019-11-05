@@ -19,7 +19,7 @@ html {
 
 *, *:before, *:after {
     box-sizing: inherit;
-  }
+}
 
 /*
  * Remove text-shadow in selection highlight:
@@ -133,6 +133,8 @@ header,
 footer,
 main {
   /*set display to flex and vertically & horizontally align by setting justify-content and align-items to center*/
+  display: flex;
+  align-items: center;
 }
 
 #div-1,
