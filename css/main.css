@@ -101,9 +101,7 @@ textarea {
    ========================================================================== */
 
 html {
-  /*background-color: #222222;*/
-  background-color: #fff;
-  font-size: 16px;
+  background-color: #222;
   height: 100%;
   width: 100%;
 }
@@ -113,58 +111,54 @@ body {
   font-size: 1em;
   color: #fff;
   padding: 0 2em;
-  height: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 header,
 footer {
-  background-color: #222;
-  height: 80px;
   width: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+header h1 {
+  font-family: 'Lora', serif;
+  font-size: 3em;
 }
 
 main {
-  background-color: #ccc;
-  height: 250px;
   width: 100%;
-}
-
-header,
-footer,
-main {
-  /*set display to flex and vertically & horizontally align by setting justify-content and align-items to center*/
   display: flex;
-  align-items: center;
-}
-
-#div-1,
-#div-2,
-#div-3 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  /* -- I think these lines are redundant and should be set at the next container down --
-  line-height: 1.5em;
-  font-size: 1.25em; --*/
-  height: auto;
+  justify-content: flex-start;
+  border-bottom: 1px solid #fff;
 }
 
 .flex-container {
   /*set display to flex and vertically & horizontally align by setting justify-content and align-items to center, and set flex-flow to row wrap*/
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-flow: row wrap;
   justify-content: space-between;
+  max-width: 1200px;
 }
 
-.flex-items {
+.flex-div {
   /*set display to flex and vertically & horizontally align by setting justify-content and align-items to center*/
-  background-color: #f16059;
   font-size: 1.25em;
   line-height: 1.5em;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  border-bottom: 1px solid #555;
 }
 
+footer {
+  border-top: 1px solid #fff;
+}
+
+footer i {
+  padding: 30px 20px 0 0;
+}
 /* ==========================================================================
    Helper classes
    ========================================================================== */
@@ -245,13 +239,18 @@ main {
    Modify as content requires.
    ========================================================================== */
 
-@media all and (min-width: 768px) {
-  .flex-items {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 30%;
+@media all and (min-width: 1200px) {
+  .flex-div {
+    flex-basis: 30%;
+    border-bottom: none;
     }
+
+    #div-2 p {
+      border-left: 1px solid #555;
+      border-right: 1px solid #555;
+      padding: 0 40px;
+    }
+
 }
 
 @media print,
